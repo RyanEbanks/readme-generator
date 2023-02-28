@@ -1,0 +1,23 @@
+{
+  "name": "static-site",
+  "version": "1.0.0",
+  "description": "This application will allow the user to generate a readme file matching the professional readme standards.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanEbanks/readme-generator.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/RyanEbanks/readme-generator/issues"
+  },
+  "homepage": "https://github.com/RyanEbanks/readme-generator#readme"
+}
