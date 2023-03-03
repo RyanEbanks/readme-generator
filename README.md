@@ -2,6 +2,9 @@
 # readme-generator
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Video Link
+[Click Here!](https://studio.youtube.com/video/fwNzMFEpG6o/edit)
+
 ## Description
 This program prompts you with various questions to generate a professional and usable github readme in real time. 
 
