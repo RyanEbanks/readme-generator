@@ -47,60 +47,52 @@ function renderLicenseLink(license) {
   }
   console.log("License Link Result: " + license);
   return license;
-  // switch (license) {
-  //   case 1:
-  //     return "[![License: MIT](https://choosealicense.com/licenses/mit/)";
-
-  //   case 2:
-  //     // code block
-  //     return "[![License: GPL v3](https://choosealicense.com/licenses/gpl-3.0/)";
-
-  //   case 3:
-  //     // code block
-  //     return "[![License: IPL 1.0](https://choosealicense.com/licenses/isc/)";
-
-  //   case 4:
-  //     // code block
-  //     return "[![License](https://choosealicense.com/licenses/apache-2.0/)";
-
-  //   case 5:
-  //     // code block
-  //     return "[![License: CC0-1.0](https://choosealicense.com/licenses/cc0-1.0/)";
-
-  //   default:
-  //     return "";
-  // }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 // function renderLicenseSection(license) { }
 
-// function renderScreenshots(myData) {
-//   if(myData.screenshots === "yes") {
-//     inquirer.prompt([{
-//         type: "input",
-//         name: "photoName",
-//         message: "What is the name of the photo/gif (File type not included): ",
-//     },
-//     {
-//         type: "input",
-//         name: "fileType: ",
-//         message: "What is the photo/gifs file type: "
-//     },
-//     {
-//         type: "input",
-//         name: "altText: ",
-//         message: "Add alternate text for screenshot upload: "
-//     },
-// ]).then((screenResponse) => {
-//     var myScreenshot = `![${screenResponse.altText}](assets/images/${photoName}.${fileType})`
-//     return myScreenshot;
-// });
-// } else if(myData.screenshots === "no") {
-//     return "";
-// }
-// }
+function renderScreenshots(screenshotAnswer, renderPhoto, renderFile, renderText) {
+  if(screenshotAnswer === "yes") {
+    //Adding a space above and below so that I can get rid of unecessary space if it returns blank in the markdown
+    var screenshotAnswer = `
+
+![${renderText}](assets/images/${renderPhoto}.${renderFile})
+
+    `;
+  } else if(screenshotAnswer === "no") {
+    var screenshotAnswer = "";
+  }
+  return screenshotAnswer;
+}
+
+function renderTableOfContent(content) {
+  if(content === "yes") {
+    var content =`
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+
+    `
+  } else if(content === "no") {
+    var content = "";
+  }
+  return content;
+}
+
+function renderTests(steps) {
+  for(let i = 0; i <= steps; i++) {
+
+
+
+  }
+
+  return steps;
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -113,19 +105,13 @@ ${renderLicenseBadge(data.license)}
 
 ## Description
 ${data.description} 
-
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-
+${renderTableOfContent(data.tableOfContents)}
 ## Installation
 ${data.projInstallation}
 
 ## Usage
 ${data.projUsage}
-
+${renderScreenshots(data.screenshots, data.photoName, data.fileType, data.altText)}
 ## License
 ${renderLicenseLink(data.license)}
 
@@ -133,7 +119,7 @@ ${renderLicenseLink(data.license)}
 ${data.projContribution}
 
 ## Tests
-${data.projTests}
+${renderTests(data.projTests)}
 
 ## Questions
 ${data.questions}
