@@ -15,7 +15,10 @@ This program prompts you with various questions to generate a professional and u
 N/A
 
 ## Usage
-This project is used to create a professional github readme file for projects.
+This project is used to create a professional github readme file for projects. To run this application by yourself download the file and run the following command in your terminal:
+```md
+ node index.js 
+```
 
 ## License
 [!License: MIT](https://choosealicense.com/licenses/mit/)
