@@ -11,7 +11,6 @@ This program prompts you with various questions to generate a professional and u
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
 - [License](#license)
 
 ## Installation
