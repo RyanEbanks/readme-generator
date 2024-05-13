@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Video Link
-[Click Here!](https://www.youtube.com/watch?v=fwNzMFEpG6o)
+[Click Here!](https://youtu.be/UaS1B3t9GvU)
 
 ## Description
 This program prompts you with various questions to generate a professional and usable github readme in real time. 
